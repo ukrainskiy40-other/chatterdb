@@ -1,9 +1,9 @@
-//pluginManagement {
-//    repositories {
-//        mavenCentral()
-//        gradlePluginPortal()
-//    }
-//}
+pluginManagement {
+    repositories {
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
 
 rootProject.name = "chatterdb"
 include("adapter:persistence")

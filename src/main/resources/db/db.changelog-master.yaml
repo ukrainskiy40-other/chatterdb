@@ -7,7 +7,7 @@ databaseChangeLog:
             dbms: postgresql
             encoding: utf8
             endDelimiter: \n/\s*\n|\n/\s*$
-            path: /db/migrations/01-cmtdb-empty.sql
+            path: /migrations/01-cmtdb-empty.sql
             relativeToChangelogFile: true
             stripComments: true
   - changeSet:
@@ -18,7 +18,7 @@ databaseChangeLog:
                   dbms: postgresql
                   encoding: utf8
                   endDelimiter:  \n/\s*\n|\n/\s*$
-                  path: /db/migrations/1669312411_create_tables.sql
+                  path: /migrations/1669312411_create_tables.sql
                   relativeToChangelogFile: true
                   stripComments: true
   - changeSet:
@@ -29,7 +29,7 @@ databaseChangeLog:
                   dbms: postgresql
                   encoding: utf8
                   endDelimiter:  \n/\s*\n|\n/\s*$
-                  path: /db/migrations/1670347349_user_auth.sql
+                  path: /migrations/1670347349_user_auth.sql
                   relativeToChangelogFile: true
                   stripComments: true
   - changeSet:
@@ -40,6 +40,6 @@ databaseChangeLog:
                   dbms: postgresql
                   encoding: utf8
                   endDelimiter:  \n/\s*\n|\n/\s*$
-                  path: /db/migrations/1673261785_create_message_view.sql
+                  path: /migrations/1673261785_create_message_view.sql
                   relativeToChangelogFile: true
                   stripComments: true
