@@ -1,0 +1,38 @@
+server:
+  port: 8080
+
+spring:
+  transaction:
+    default-timeout: 36000
+  r2dbc:
+    url: r2dbc:postgresql://localhost:32432/chatter?schema=chatter
+    username: chatter
+    password: chatter
+    pool:
+      enabled: true
+      initial-size: 5
+      max-size: 10
+  jpa:
+    open-in-view: false
+    show-sql: true
+
+logging:
+  level:
+    root: INFO
+    org.apache.http: WARN
+    org.springframework.web: WARN
+    org.springframework.controllers: WARN
+    io.ukrainskiy.rnd: DEBUG
+    jdbc:
+      resultsettable: WARN
+      sqltiming: WARN
+      sqlonly: FATAL
+      audit: FATAL
+      resultset: WARN
+      connection: WARN
+    org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: off
+    io.swagger.models.parameters.AbstractSerializableParameter: error
+
+
+
+

@@ -1,0 +1,57 @@
+server:
+  port: 8080
+  address: 0.0.0.0
+  servlet.session.timeout: 120m
+  error:
+    include-stacktrace: always
+
+spring:
+  profiles.active: local
+  application:
+    name: CHATTERDB-MICRO
+  main:
+    banner-mode: "off"
+    web-application-type: reactive
+  mvc.view.suffix: .html
+  servlet.multipart:
+    max-file-size: 202400KB
+    max-request-size: 202400KB
+  task:
+    scheduling:
+      pool:
+        size: 10
+  transaction:
+    default-timeout: 36000
+  r2dbc:
+    url: r2dbc:postgresql://localhost:32432/database?schema=public
+    username: user
+    password: password
+    pool:
+      enabled: true
+      initial-size: 5
+      max-size: 10
+  liquibase:
+    changelog: classpath:/db/db.changelog-master.yaml
+
+
+
+logging:
+  level:
+    root: INFO
+    org.apache.http: WARN
+    org.springframework.web: WARN
+    org.springframework.controllers: WARN
+    io.ukrainskiy.rnd: DEBUG
+    jdbc:
+      resultsettable: WARN
+      sqltiming: WARN
+      sqlonly: FATAL
+      audit: FATAL
+      resultset: WARN
+      connection: WARN
+    org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: off
+    io.swagger.models.parameters.AbstractSerializableParameter: error
+
+
+
+
